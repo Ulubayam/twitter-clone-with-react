@@ -1,2 +1,2 @@
 # twitter-clone-with-react
-UI components with Stroybook
+UI components with Storybook
