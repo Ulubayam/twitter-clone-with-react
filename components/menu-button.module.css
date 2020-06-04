@@ -1,0 +1,6 @@
+.menuButton {
+	background-color:#ccc;
+	svg {
+		color: red;
+	}
+}
