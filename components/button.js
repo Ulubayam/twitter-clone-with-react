@@ -1,9 +1,10 @@
 import React from 'react'
 
 import styles from './button.module.css'
-function button({ children, ...props }) {
+import cn from 'classnames'
+function button({ children, className, ...props }) {
   return (
-    <button type="button" className={styles.button} {...props}>
+    <button type="button" className={cn(styles.button, className)} {...props}>
       {children}
     </button>
   )
