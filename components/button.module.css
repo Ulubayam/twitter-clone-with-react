@@ -2,4 +2,21 @@
 	cursor: pointer;
 	background-color: transparent;
 	color: var(--c-text-color);
+	border-radius: 99px;
+	display: flex;
+	align-items: center;
+	transition: var(--fade);
+	justify-content: center;
+	&:hover {
+		background-color: var(--c-theme-20);
+		color: var(--c-theme);
+		}
+}
+
+.fullWidth {
+	width: 100% !important;
+}
+
+.bigButton {
+	height: 47px;
 }
