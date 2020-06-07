@@ -4,4 +4,8 @@
 	grid-gap: 10px;
 	font-size: 35px;
 	padding: 20px;
+	color: white;
+}
+body {
+	padding : 30px;
 }

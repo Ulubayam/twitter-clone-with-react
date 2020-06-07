@@ -1,5 +1,6 @@
 import React from 'react'
 import MenuButton from './menu-button'
+import TitleBold from './title-bold'
 import {
   Twitter,
   Home,
@@ -12,49 +13,51 @@ import {
   More
 } from './icons'
 import styles from './navigation.module.css'
-function Navigation() {
+function Navigation({ selectedKey }) {
   return (
     <nav className={styles.nav}>
       <MenuButton>
         <Twitter />
       </MenuButton>
-      <MenuButton>
+
+      <MenuButton selected={selectedKey === 'home'}>
         <Home />
-        <span>Home</span>
+        <TitleBold>Home</TitleBold>
       </MenuButton>
-      <MenuButton>
+
+      <MenuButton selected={selectedKey === 'explore'}>
         <Explore />
-        <span>Explore</span>
+        <TitleBold>Explore</TitleBold>
       </MenuButton>
 
-      <MenuButton>
+      <MenuButton notify={17} selected={selectedKey === 'notification'}>
         <Notification />
-        <span>Notification</span>
+        <TitleBold>Notification</TitleBold>
       </MenuButton>
 
-      <MenuButton>
+      <MenuButton selected={selectedKey === 'messages'}>
         <Messages />
-        <span>Messages</span>
+        <TitleBold>Messages</TitleBold>
       </MenuButton>
 
-      <MenuButton>
+      <MenuButton selected={selectedKey === 'bookmark'}>
         <Bookmark />
-        <span>Bookmark</span>
+        <TitleBold>Bookmark</TitleBold>
       </MenuButton>
 
-      <MenuButton>
+      <MenuButton selected={selectedKey === 'lists'}>
         <Lists />
-        <span>Lists</span>
+        <TitleBold>Lists</TitleBold>
       </MenuButton>
 
-      <MenuButton>
+      <MenuButton selected={selectedKey === 'profile'}>
         <Profile />
-        <span>Profile</span>
+        <TitleBold>Profile</TitleBold>
       </MenuButton>
 
-      <MenuButton>
+      <MenuButton selected={selectedKey === 'more'}>
         <More />
-        <span>More</span>
+        <TitleBold>More</TitleBold>
       </MenuButton>
     </nav>
   )

@@ -1,9 +1,14 @@
 import React from 'react'
 
 import styles from './button.module.css'
-function button({ children, ...props }) {
+import cn from 'classnames'
+function button({ full = false, children, className, ...props }) {
   return (
-    <button type="button" className={styles.button} {...props}>
+    <button
+      type="button"
+      className={cn(styles.button, full && styles.fullWidth, className)}
+      {...props}
+    >
       {children}
     </button>
   )
