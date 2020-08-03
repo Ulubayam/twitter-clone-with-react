@@ -2,3 +2,5 @@ node_modules
 .next
 .idea
 public/ui
+package-lock.json
+yarn.lock
