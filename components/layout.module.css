@@ -1,0 +1,11 @@
+.layout {
+display: grid;
+grid-template-columns: 230px 1fr;
+background-color: #eee;
+min-height: 100vh;
+
+@media (--t) {
+		grid-template-columns: 230px 1fr 230px;
+  }
+}
+

@@ -13,7 +13,7 @@ import {
   More
 } from './icons'
 import styles from './navigation.module.css'
-function Navigation({ selectedKey }) {
+function Navigation({ flat = false, selectedKey }) {
   return (
     <nav className={styles.nav}>
       <MenuButton>
