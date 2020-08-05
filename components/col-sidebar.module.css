@@ -1,2 +1,21 @@
 .sidebar {
+	padding-right: 20px;
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@media (--d) {
+		align-items:flex-start;
+	}
+}
+.profile {
+	margin-top: auto;
+}
+
+.tweet {
+	margin-bottom: 20px;
+	margin-top: 16px;
+	@media (--d) {
+		width: 100%;
+	}
 }

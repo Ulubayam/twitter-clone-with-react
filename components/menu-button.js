@@ -1,7 +1,7 @@
-import React from 'react'
-import Button from './button'
-import styles from './menu-button.module.css'
-import cn from 'classnames'
+import React from "react";
+import Button from "./button";
+import styles from "./menu-button.module.css";
+import cn from "classnames";
 function MenuButton({ notify, children, selected, ...props }) {
   return (
     <Button
@@ -9,10 +9,10 @@ function MenuButton({ notify, children, selected, ...props }) {
       className={cn(styles.menuButton, selected && styles.navButtonSelected)}
       {...props}
     >
+      {notify > 0 && <span className={styles.notify}>{notify}</span>}
       {children}
-      {notify && <span className={styles.notify}>{notify}</span>}
     </Button>
-  )
+  );
 }
 
-export default MenuButton
+export default MenuButton;

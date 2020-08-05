@@ -5,7 +5,9 @@ padding-left: 15px;
 padding-right: 15px;
 height: 48px;
 font-weight: bold;
+min-width: 40px;
 &:hover {
+	min-width: 47px;
 	background-color: var(--c-theme);
     color: var(--c-text-color);
 	}
