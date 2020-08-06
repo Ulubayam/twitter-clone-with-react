@@ -6,9 +6,11 @@ import Stack from '../components/stack'
 import Navigation from '../components/navigation'
 import { Home } from '../components/icons'
 import TitleBold from '../components/title-bold'
+import { withKnobs, boolean } from '@storybook/addon-knobs'
 
 export default {
-  title: 'Buttons'
+  title: 'Buttons',
+  decorators: [withKnobs]
 }
 export const Normal = () => <Button>Normal</Button>
 export const Theme = () => (
@@ -27,4 +29,7 @@ export const Menu = () => (
     <TitleBold>Home</TitleBold>
   </MenuButton>
 )
-export const Nav = () => <Navigation selectedKey="home" />
+export const Nav = () => {
+  const flat = boolean('Flat', false)
+  return <Navigation flat={flat} selectedKey="home" />
+}

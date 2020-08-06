@@ -1,8 +1,14 @@
-import React from 'react'
-import Button from './button'
-import styles from './theme-button.module.css'
-import cn from 'classnames'
-function ThemeButton({ children, big = false, className, ...props }) {
+import React from "react";
+import Button from "./button";
+import styles from "./theme-button.module.css";
+import cn from "classnames";
+function ThemeButton({
+  flat = false,
+  children,
+  big = false,
+  className,
+  ...props
+}) {
   return (
     <Button
       type="button"
@@ -11,7 +17,7 @@ function ThemeButton({ children, big = false, className, ...props }) {
     >
       {children}
     </Button>
-  )
+  );
 }
 
-export default ThemeButton
+export default ThemeButton;
