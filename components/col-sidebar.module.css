@@ -6,6 +6,7 @@
 	align-items: center;
 	@media (--d) {
 		align-items:flex-start;
+		padding-right:46px;
 	}
 }
 .profile {
