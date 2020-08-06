@@ -4,6 +4,7 @@ import { MENU } from "../constants";
 import styles from "./navigation.module.css";
 import MenuButton from "./menu-button";
 import TitleBold from "./title-bold";
+import cn from "classnames";
 function Navigation({ flat = false }) {
   const router = useRouter();
   return (
@@ -17,7 +18,7 @@ function Navigation({ flat = false }) {
             notify={menu.notify}
             selected={selected}
             href={menu.path}
-            className={styles.navButton}
+            className={cn(styles.navButton, menu.key)}
           >
             {selected ? menu.iconSelected : menu.icon}
             {showTitle && <TitleBold> {menu.title} </TitleBold>}
